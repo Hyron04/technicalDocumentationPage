@@ -1,13 +1,15 @@
 
 /* CSS Code for the Technical Documentation Page */
-/*Navbar Styling*/
+
+/* Navbar Styling */
 #navbar {
     width: 250px;
     background-color: #333;
     color: #fff;
     padding: 15px;
     position: fixed;
-    left: 10px;
+    left: 0; /* Ensure navbar is always on the left edge */
+    top: 0;
     height: 100%;
     overflow: auto;
 }
@@ -34,7 +36,7 @@
     background-color: #575757;
 }
 
-/*Body Styling*/
+/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -43,7 +45,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/*Main Section Styling*/
+/* Main Section Styling */
 #main-doc {
     margin-left: 270px;
     padding: 20px;
@@ -62,7 +64,7 @@ body {
     margin-bottom: 10px;
 }
 
-/*Code block Styling*/
+/* Code block Styling */
 code {
     display: block;
     background-color: #f4f4f4;
@@ -71,7 +73,27 @@ code {
     margin: 20px 0;
 }
 
-/*List items styles*/
+/* List items styles */
 li {
     margin: 5px 0;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #navbar a {
+        float: left;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #main-doc {
+        margin-left: 0;
+    }
 }
